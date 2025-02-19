@@ -104,7 +104,7 @@ h1{
     width: auto;
     height: 300px;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     padding: 25px;
     overflow: auto;
     margin-bottom: 50px;
