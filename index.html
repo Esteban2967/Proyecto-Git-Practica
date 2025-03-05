@@ -14,76 +14,146 @@
             <img src="./Static/Img/logo.png" alt="">
         </div>
         <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="#Habitaciones">Habitaciones</a>
-            <a href="#Servicios">Servicios</a>
-            <a href="#Galería">Galería</a>
-            <a href="#Testimonios">Testimonios</a>
-            <a href="#Contacto">Contacto</a>
-            <a href="#" class="rev">Reservas</a>
+            <a href="#main">Inicio</a>
+            <a href="#habitaciones">Habitaciones</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
 
-    <main class="main1">
-        <h1>
-            Bienvenido a [Nombre del hotel]
-        </h1>
-        <p>
-            Tu lugar perfecto para descansar y disfrutar.
-        </p>
+    <main id="main" class="main1">
+        <div class="tex-main">
+            <h1>
+                Bienvenido a Sena
+            </h1>
+            <p>
+                Tu lugar perfecto para descansar y disfrutar.
+            </p>
+        </div>
     </main>
 
-    <main class="main2">
-        <label id="Habitaciones">Habitaciones</label>
-        <section class="sec1">
-            <div class="content">
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
+    <!-- Sección de Habitaciones -->
+    <section id="habitaciones" class="habitaciones">
+        <h2>Nuestras Habitaciones</h2>
+        <div class="content">
+            <div class="scroll">
+                <div class="card">
+                    <h3>Habitación Estándar</h3>
+                    <p>Comodidad y elegancia a un precio accesible.</p>
+                    <a href="#reservas" class="cta">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Suite Deluxe</h3>
+                    <p>Lujo y espacio para una experiencia inolvidable.</p>
+                    <a href="#reservas" class="cta">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Habitación King</h3>
+                    <p>Comodidad y elegancia a un precio accesible.</p>
+                    <a href="#reservas" class="cta">Reservar</a>
+                </div>
+                <div class="card">
+                    <h3>Habitación Estándar</h3>
+                    <p>Comodidad y elegancia a un precio accesible.</p>
+                    <a href="#reservas" class="cta">Reservar</a>
+                </div>
             </div>
-        </section>
-
-        <label id="Servicios">Servicios</label>
-        <section class="sec1">
-            <div class="content">
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <a id="modal-button" href="#" class="cta">Ir a Reservas</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <label id="Galería">Galería</label>
-        <section class="sec1">
-            <div class="content">
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="servicios">
+        <h2>Servicios y Comodidades</h2>
+        <div class="content">
+            <div class="scroll">
+                <div class="card">
+                    <img src="/Static/Img/wifi.jpg" alt="WiFi">
+                    <h3>WiFi</h3>
+                </div>
+                <div class="card">
+                    <img src="/Static/Img/piscina.jpg" alt="Piscina">
+                    <h3>Piscina</h3>
+                </div>
+                <div class="card">
+                    <img src="/Static/Img/Cocina.jpg" alt="Cocina">
+                    <h3>Cocina</h3>
+                </div>
+                <div class="card">
+                    <img src="/Static/Img/Parqueadero.png" alt="Parqueadero">
+                    <h3>Parqueadero</h3>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <label id="Testimonios">Testimonios</label>
-        <section class="sec1">
-            <div class="content">
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
-                <div class="contenido"></div>
+    <!-- Sección de Galería -->
+    <section id="galeria" class="galeria">
+        <h2>Galería</h2>
+        <div class="content">
+            <div class="scroll">
+                <img src="galeria1.jpg" alt="Galería 1">
+                <img src="galeria2.jpg" alt="Galería 2">
+                <img src="galeria3.jpg" alt="Galería 3">
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Sección de Testimonios -->
+    <section id="testimonios" class="testimonios">
+        <h2>Lo que Dicen Nuestros Huéspedes</h2>
+        <div class="content">
+            <div class="scroll">
+                <div class="card">
+                    <p>"¡Una experiencia maravillosa! Volveré pronto."</p>
+                    <h3>- María G.</h3>
+                </div>
+                <div class="card">
+                    <p>"El personal fue muy amable y las instalaciones impecables."</p>
+                    <h3>- Juan P.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Sección de Contacto -->
+    <h2>Contáctanos</h2>
+    <section id="contacto" class="contacto">
+        <div class="contactenos">
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="cta">Enviar</button>
+            </form>
+        </div>
+        <div class="mapa">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-0.123456!3d39.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDA3JzI0LjQiTiAwwrAwNyczNi4wIlc!5e0!3m2!1ses!2ses!4v1234567890123"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Hotel [Nombre]. Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
     </footer>
+    <script src="./Static/Js/index.js"></script>
 </body>
 
 </html>
