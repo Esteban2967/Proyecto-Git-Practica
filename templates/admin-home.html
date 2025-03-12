@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Sistema Hotelero</title>
+    <link rel="stylesheet" href="../Static/Css/admin-home.css">
+</head>
+<body>
+    <header>
+        <h1>ADMIN - HOME</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="login-icon" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+    </header>
+    <div class="layout">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="">Reservas</a>
+                </li>
+                <li  class="active">
+                    <a class="active" href="../templates/admin-home.html">Habitaciones</a>
+                </li>
+                <li>
+                    <a href="">Clientes</a>
+                </li>
+                <li>
+                    <a href="">Ventas</a>
+                </li>
+                <li>
+                    <a href="">Verificación de Salidas</a>
+                </li>
+                <li>
+                    <a href="">Almacén Productos</a>
+                </li>
+                <li>
+                    <a href="../templates/usuarios.html">Usuarios</a>
+                </li>
+                <li>Mantenimiento
+                    <ul class="sub-mantenimiento">
+                        <li>Habitaciones</li>
+                        <li>Categoria</li>
+                        <li>Nivel</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="stats">
+                <a href="atencion.html" class="card red">
+                    <h2>0</h2>
+                    <p>Hab. que requieren atención</p>
+                </a>
+                <a href="disponibles.html" class="card green">
+                    <h2>14</h2>
+                    <p>Habitaciones Disponibles</p>
+                </a>
+                <a href="reservadas.html" class="card blue">
+                    <h2>2</h2>
+                    <p>Habitaciones Reservadas</p>
+                </a>
+                <a href="ocupadas.html" class="card orange">
+                    <h2>1</h2>
+                    <p>Habitaciones Ocupadas</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
