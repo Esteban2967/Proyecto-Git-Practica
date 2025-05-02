@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sigmar&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    overflow-y:scroll;
+    font-family: "Rubik", serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 4em;
+    background-color: #00a2ff;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    height: 100%;
+    margin-left: 2em;
+}
+
+.ingreso{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 1em;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 2.5em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    height: 60%;
+    padding: 0 1em;
+    text-align: center;
+    align-content: center;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-family: "Rubik", serif;
+}
+
+header nav a:hover {
+    color: #00a2ff;
+    background-color: white;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 4em);
+}
+
+.Habitaciones_Filtro {
+    display: flex;
+    width: 20%;
+    height: 100%;
+}
+
+.Filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #2c3e50;
+    padding: 20px 10px;
+    gap: 1em;
+}
+
+.F_Texto{
+    color: white;
+}
+
+.Filtro .itemFilto {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.Filtro .itemFilto:hover {
+    background-color: white;
+    color: #2980b9;
+    transform: scale(1.05);
+}
+
+.Lista_habitaciones {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.Tarjeta_habitaciones {
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    align-items: center;
+    background-color: white;
+    padding: 0 1em 0 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Img_Habitaciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    min-width: 100px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Img_Habitaciones img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 1em;
+    width: 60%;
+    height: 100%;
+    justify-content: space-evenly;
+    overflow-y: auto;
+}
+
+.descripcion h3{
+    text-align: center;
+}
+
+.descripcion::-webkit-scrollbar{
+    display: none;
+}
+
+.Btn_Reserva {
+    display: flex;
+    width: 20%;
+    height: 40%;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: #e67e22; /* Naranja elegante */
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition:0.4s;
+    border: none;
+    box-shadow: 5px 4px 5px rgb(122, 116, 107);
+}
+
+.Btn_Reserva:hover {
+    background-color: #d35400; /* Oscurece al pasar el mouse */
+    transform: scale(1.03);
+}
+
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.modal-content::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-content h2{
+    text-align: center;
+    padding: 1em;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: #00a2ff;
+    border: 1px solid #00a2ff;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+form button:hover{
+    border: 1px solid #ddd;
+    background-color: #00a2ff;
+    color: white;
+    transform: scale(1.05);
+}

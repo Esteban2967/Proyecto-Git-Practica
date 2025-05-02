@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../Static/Css/login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="icon-circle">
+                <img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" alt="lock" />
+            </div>
+            <h2>Iniciar Sesión</h2>
+            <form action="#" method="POST">
+                <label for="username">Usuario *</label>
+                <input type="text" id="username" name="username" placeholder="Enter your Username" required />
+                
+                <label for="password">Contraseña *</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required />
+                
+                <div class="remember">
+                    <input type="checkbox" id="remember" name="remember" />
+                    <label for="remember">Recuérdame</label>
+                </div>
+                
+                <button type="submit">INGRESAR
+                    <a href="../template.php">INGRESAR</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

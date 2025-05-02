@@ -1,0 +1,208 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-decoration: none;
+    overflow: hidden; /* Elimina el scroll */
+}
+
+header {
+    background-color: #00a2ff;
+    color: white;
+    text-align: center;
+    padding: 0 25px;
+    font-weight: bold;
+    display: flex;
+    height: 6em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-icon {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.login-icon:hover {
+    transform: scale(1.1);
+}
+
+.layout {
+    display: flex;
+    height: calc(100vh - 6em);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover,
+.sidebar ul .active {
+    background-color: #00a2ff;
+}
+
+.sidebar ul li:hover .sub-mantenimiento,
+.sidebar ul li .sub-mantenimiento:hover {
+    display: block;
+}
+
+.sidebar ul li a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-mantenimiento {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width: 200px;
+    margin-top: 11px;
+}
+
+.sub-mantenimiento ul li {
+    cursor: pointer;
+}
+
+/* Main Content */
+.form-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5% 5%;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.amenities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.add-row, .remove-row {
+    background: #3488d6;
+    color: white;
+    border: none;
+    margin: 1%;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.remove-row {
+    background: #ff2929e8;
+}
+
+.remove-row:hover {
+    background: #ee2323e8;
+}
+
+.add-row {
+    background: #36ff47cb;
+}
+
+.add-row:hover {
+    background: #29f821;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.BOTONES{
+    display: flex;
+}
+
+button {
+    width: 50%; /* Botones más compactos */
+    margin: 1%; /* Separación entre botones */
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.capacidad-precio {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+.capacidad-precio input {
+    width: 45%; 
+}
+
+.nueva_habitacion {
+    text-align: center;
+    margin-top: 12px;
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nueva_habitacion:hover {
+    text-decoration: underline;
+}

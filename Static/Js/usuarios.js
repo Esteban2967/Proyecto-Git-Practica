@@ -1,51 +1,61 @@
-// Obtener referencias a los elementos clave
+// Referencias a elementos clave
 const addButton = document.querySelector('.add-button');
+const modal = document.getElementById('user-modal');
+const cancelButton = document.getElementById('cancel-button');
+const userForm = document.getElementById('user-form');
 const userTable = document.getElementById('user-table');
 
-// Evento para agregar un usuario
+// Mostrar ventana emergente
 addButton.addEventListener('click', () => {
-    // Pedir información del usuario
-    const documento = prompt('Ingrese el número de documento:');
-    const nombre = prompt('Ingrese el nombre completo del usuario:');
-    const celular = prompt('Ingrese el número de celular:');
-    const estado = 'ACTIVO'; // Estado por defecto
+    modal.style.display = 'flex';
+});
 
-    // Validar los campos
-    if (!documento || !nombre || !celular) {
-        alert('Todos los campos son obligatorios.');
-        return;
-    }
+// Cerrar ventana emergente
+cancelButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Agregar usuario desde el formulario
+userForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Evita el envío del formulario
+
+    // Obtener datos del formulario
+    const documentValue = document.getElementById('document').value;
+    const nameValue = document.getElementById('name').value;
+    const phoneValue = document.getElementById('phone').value;
 
     // Crear una nueva fila en la tabla
     const row = document.createElement('tr');
     row.innerHTML = `
-        <td>${documento}</td>
-        <td>${nombre}</td>
-        <td>${celular}</td>
-        <td class="status active">${estado}</td>
+        <td>${documentValue}</td>
+        <td>${nameValue}</td>
+        <td>${phoneValue}</td>
+        <td class="status active">ACTIVO</td>
         <td class="options">
             <button class="edit">✏️</button>
             <button class="delete">🗑️</button>
         </td>
     `;
 
-    // Agregar eventos a los botones de editar y eliminar
+    // Agregar eventos a los botones de edición y eliminación
     const editButton = row.querySelector('.edit');
     const deleteButton = row.querySelector('.delete');
 
     editButton.addEventListener('click', () => {
-        const newNombre = prompt('Ingrese el nuevo nombre:', nombre);
-        const newCelular = prompt('Ingrese el nuevo celular:', celular);
-        if (newNombre) row.cells[1].textContent = newNombre;
-        if (newCelular) row.cells[2].textContent = newCelular;
+        const newName = prompt('Nuevo nombre:', nameValue);
+        const newPhone = prompt('Nuevo celular:', phoneValue);
+        if (newName) row.cells[1].textContent = newName;
+        if (newPhone) row.cells[2].textContent = newPhone;
     });
 
     deleteButton.addEventListener('click', () => {
-        if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
-            row.remove();
-        }
+        if (confirm('¿Eliminar este usuario?')) row.remove();
     });
 
     // Añadir la fila a la tabla
     userTable.appendChild(row);
+
+    // Limpiar el formulario y cerrar la ventana
+    userForm.reset();
+    modal.style.display = 'none';
 });

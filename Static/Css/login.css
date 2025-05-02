@@ -1,0 +1,100 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-image: url(../Img/blur-pool-hotel-resort.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+background: white;
+width: 380px;
+padding: 40px 30px 30px;
+border-radius: 20px;
+box-shadow: 0 1px 500px #00a2ff;
+position: relative;
+text-align: center;
+}
+
+.icon-circle {
+position: absolute;
+top: -50px;
+left: calc(50% - 50px);
+width: 100px;
+height: 100px;
+background: linear-gradient(135deg, #a84df0, #3fd0f5);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 5px solid white;
+}
+
+.icon-circle img {
+width: 50px;
+height: 50px;
+}
+
+h2 {
+margin-top: 60px;
+margin-bottom: 20px;
+color: #00a2ff;
+}
+
+form label {
+text-align: left;
+display: block;
+margin: 10px 0 5px;
+font-size: 14px;
+color: #777;
+}
+
+form input[type="text"],
+form input[type="password"] {
+width: 100%;
+padding: 12px 15px;
+border: none;
+border-radius: 30px;
+background: #f1f1f1;
+margin-bottom: 15px;
+outline: none;
+font-size: 14px;
+}
+
+.remember {
+display: flex;
+align-items: center;
+font-size: 13px;
+margin-bottom: 20px;
+}
+
+.remember input {
+margin-right: 10px;
+}
+
+button {
+width: 100%;
+padding: 12px;
+border: none;
+border-radius: 30px;
+background-color: #00a2ff;
+color: white;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #4800ff;
+}

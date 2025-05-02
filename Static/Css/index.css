@@ -17,13 +17,19 @@ header {
     height: 4em;
     background-color: #00a2ff;
     justify-content: space-between;
-    position: fixed;
 }
 
 header .logo {
     display: flex;
     height: 100%;
     margin-left: 2em;
+}
+
+.ingreso{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 header nav {
@@ -58,14 +64,16 @@ header nav a:hover {
     display: flex;
     width: 100%;
     height: 120vh;
-    background-image: url(/Static/Img/fondo-2.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.529), transparent 70%), url(../Img/silhouette-palm-tree-with-umbrella.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
+    background-attachment: fixed;
     font-size: 150%;
     align-items: center;
     gap: 10px;
 }
+
 
 .tex-main {
     background-color: rgba(0, 0, 0, 0.436);
@@ -159,7 +167,7 @@ h2 {
     max-width: 100%;
     height: 80%;
     display: block;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Footer */
