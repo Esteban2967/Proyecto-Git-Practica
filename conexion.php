@@ -1,18 +1,16 @@
 <?php
-// Datos de conexión a la base de datos
 $host = 'localhost';
 $dbname = 'mydb';
 $username = 'root';
-$password = '';
+$password = 'toor';
 
-try {
-    // Crear una nueva conexión PDO
-    $conexion = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    // Configurar el modo de error de PDO a excepción
-    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexión exitosa a la base de datos.";
-} catch (PDOException $e) {
-    // Manejar errores de conexión
-    echo "Error en la conexión: " . $e->getMessage();
+// Crear conexión MySQLi
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Verificar si hay error en la conexión
+if ($conn->connect_error) {
+    die("Error en la conexión: " . $conn->connect_error);
 }
-?>
+
+// Opcional: configurar charset
+$conn->set_charset("utf8");
